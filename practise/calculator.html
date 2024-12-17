@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ur">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Calculator</title>
+    <style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4; 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh; 
+        margin: 0; 
+    }
+    #calculator {
+        width: 300px;
+        padding: 20px; 
+        border-radius: 10px;
+        background-color: #3b3939; 
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); 
+        text-align: center; 
+    }
+    input[type="number"] {
+        width: calc(100% - 20px);
+        padding: 10px; 
+        margin: 10px 0; 
+        border: 1px solid #ccc; 
+        border-radius: 5px; 
+        font-size: 16px; 
+    }
+    button {
+        width: 100%; 
+        padding: 10px;
+        margin: 5px 0; 
+        border: none; 
+        border-radius: 5px; 
+        font-size: 16px; 
+        background-color: #007BFF; 
+        color: white; 
+        cursor: pointer; 
+        transition: background-color 0.3s; 
+    }
+    button:hover {
+        background-color: #0760be; 
+    }
+    h3 {
+        margin-top: 20px; 
+        font-size: 18px; 
+        color: white;
+    }
+</style>
+</head>
+<body>
+    <div id="calculator">
+        <input type="number" id="num1" placeholder="Add No One" />
+        <input type="number" id="num2" placeholder="Add No Two"/>
+        <button onclick="add()">Addition</button>
+        <button onclick="subtract()">Subtraction</button>
+        <button onclick="multiply()">Multiply</button>
+        <button onclick="divide()">Divide</button>
+        <h3 id="result"> RESULT </h3>
+    </div>
+    <script>
+        function add() {
+            const num1 = parseInt(document.getElementById('num1').value);
+            const num2 = parseInt(document.getElementById('num2').value);
+            const result = num1 + num2;
+            document.getElementById('result').innerText = result;
+        }
+        function subtract() {
+            const num1 = parseInt(document.getElementById('num1').value);
+            const num2 = parseInt(document.getElementById('num2').value);
+            const result = num1 - num2;
+            document.getElementById('result').innerText = result;
+        }
+        function multiply() {
+            const num1 = parseInt(document.getElementById('num1').value);
+            const num2 = parseInt(document.getElementById('num2').value);
+            const result = num1 * num2;
+            document.getElementById('result').innerText = result;
+        }  
+        function divide() {
+            const num1 = parseInt(document.getElementById('num1').value);
+            const num2 = parseInt(document.getElementById('num2').value);
+            const result = num1 / num2;
+            document.getElementById('result').innerText = result;
+        }
+    </script>
+</body>
+</html>

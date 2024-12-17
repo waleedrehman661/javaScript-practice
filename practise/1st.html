@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-family: "Poppins", sans-serif;
+        }
+        section{
+            display: flex;
+            justify-content: center;
+        }
+        h1{
+            margin-left: 80px;
+        }
+        .main{
+            margin-top: 60px;
+          width: 70%;
+          height: 500px;
+          background-color: cornflowerblue;
+          border-radius: 10px;
+        }
+        .font{
+            background-color: aliceblue;
+            width: 40%;
+            height: 50px;
+            margin: 50px 0px 0px 200px;
+        }
+        .h3{
+            margin: 50px 0px 0px 200px;
+        }
+        .btn{
+            padding: 10px;
+            border: none;
+            border-radius: 10px;
+            transition: 0.4s;
+           background-color: rgb(68, 128, 240);
+           color: white;
+           margin-right: 20px;
+        }
+        .btn:hover{
+            background-color: crimson;
+        }
+        .btn-div{
+            margin-left: 260px;
+            margin-top: 30px;
+        }
+        .input{
+            width: 100px;
+            height: 40px;
+            margin-top: 10px;
+        }
+        .c-c{
+            margin-left: 270px;
+            color: white;
+        }
+        .h1-1{
+            
+        }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+    <section>
+    <div id="main" class="main">
+        <h3 class="h3">Font Size increase & decrease</h3>
+       <div class="font">
+        <h1 class="h1-1" id="h1">PRACTISE</h1>
+       </div>
+       <div class="btn-div">
+       <button class="btn" onclick="size()">Increase</button>
+       <button class="btn" onclick="defalt()">decrease</button>
+       </div>
+       <h2 class="c-c">Change color</h2>
+       <div style="display: flex; margin-left: 250px; gap: 10px;">
+       <input class="input" onchange="change(this.value)" type="color">
+       <input class="input" onchange="bgchange(this.value)" type="color">
+       </div>
+    </div>
+    </section>
+</body>
+</html>
+<script>
+    function change(bg){
+       document.getElementById("h1").style =`color: ${bg};`
+    }
+    function bgchange(bg){
+       document.getElementById("main").style =`background-color: ${bg};`
+    }
+    function size(){
+         document.getElementById("h1").style = `font-size: 30px;`
+    }
+    function defalt(){
+         document.getElementById("h1").style = `font-size: 20px;`
+    }
+    
+</script>

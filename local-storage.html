@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qtv tutor</title>
+    <form id="">
+    <label for="">Username</label>
+    <input type="text" name="" id="name">
+    <label for="">Email</label>
+    <input type="email" name="" id="email">
+    <button onclick="store()">Submit</button>
+    </form>
+</head>
+<body>
+    <script>
+        function store(){
+        var name = document.getElementById("name").value
+        var email = document.getElementById("email").value
+        localStorage.setItem("Name",name)
+        localStorage.setItem("email",email)
+        alert("Your Submittion Has Been Success")
+    }
+    </script>
+</body>
+</html>

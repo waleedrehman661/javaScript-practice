@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var obt_marks = parseInt(prompt("Enter your obtained marks"));
+        var total_marks = parseInt(prompt("Enter your total marks"));
+        var percentage = obt_marks/total_marks*100;
+
+ if (percentage >= 80) {
+    alert(`Your Percentage is ${percentage} and your grade is A+`)
+}
+ else if (percentage >= 70) {
+    alert(`Your Percentage is ${percentage} and your grade is A`)
+}
+ else if (percentage >= 60) {
+    alert(`Your Percentage is ${percentage} and your grade is B`)
+}
+ else if (percentage >= 50) {
+    alert(`Your Percentage is ${percentage} and your grade is C`)
+}
+ else if (percentage >= 40) {
+    alert(`Your Percentage is ${percentage} and your grade is D`)
+}
+ else {
+    alert(`Your Percentage is ${percentage} and you have Failed`)
+}
+
+    </script>
+</body>
+</html>

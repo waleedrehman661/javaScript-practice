@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text to speech</title>
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f3f3f3;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    text-align: center;
+    height: 400px;
+    padding: 50px;
+    border-radius: 8px;
+    background-color: #ffffff;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+}
+
+h2 {
+    font-size: 24px;
+    margin-bottom: 30px;
+    color: #333333;
+}
+
+input[type="text"] {
+    width: 80%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #e7e7e7;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+button {
+    margin-top: 40px;
+    background-color: #4CAF50;
+    color: #ffffff;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+button:active {
+    transform: scale(0.98);
+}
+p{
+    text-align: justify;
+    text-align: center;
+    padding-top: 20px;
+}
+@media (max-width:500px) {
+    body{
+        padding: 10px;
+    }
+    .container{
+        height: 400px;
+        padding: 50px 20px;
+    }
+    p{
+        text-align: center;
+        text-align: justify;
+    }
+}
+    </style>
+</head>
+    <body>
+        <div class="container">
+            <h2>Text to Speak Generator</h2>
+            <input type="text" id="input" placeholder="Enter text here...">
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facilis, corrupti excepturi temporibus voluptates sed, cum deserunt maxime id repudiandae ex accusamus nihil fugiat! Est, ea itaque nisi adipisci illum iste?</p>
+            <button onclick="speak()">Speak</button>
+        </div>
+    </body>    
+</html>
+
+<script>
+document.querySelector("button").addEventListener("click", function() {
+    // events
+    const spoken = document.querySelector("#input").value;
+    const utterance = new SpeechSynthesisUtterance(spoken);
+    speechSynthesis.speak(utterance);
+});
+function speak() {
+    // Get the text from the paragraph (textarea)
+    const spoken = document.querySelector("#paragraph").textContent;
+
+    // Create a SpeechSynthesisUtterance instance
+    const utterance = new SpeechSynthesisUtterance(spoken);
+
+    // Speak the text using the SpeechSynthesis API
+    speechSynthesis.speak(utterance);
+}
+</script>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>input feild js</title>
+    <style>
+        .a{
+            margin: 30px 40px;
+           padding: 10px;
+           width: 200px;
+           height: 10px;
+           border-radius: 5px;
+           background-color: rgb(238, 236, 236);
+           border: none;
+        }
+        .b{
+            font-weight: bold;
+            color: rgb(255, 0, 34);
+        }
+        .main{
+            width: 300px;
+            height: 240px;
+            background-color: cornflowerblue;
+            border-radius: 5px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .output{
+            width: 180px;
+            height: 50px;
+            background-color: white;
+            justify-content: center;
+            margin-left: 50px;
+            padding: 3px;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+    <input class="a" type="text" onkeyup="show(this.value)">
+    <div class="output">
+    <h1 class="b" id="text"></h1>
+    </div>
+    </div>
+</body>
+<script>
+    function show(a){
+        document.getElementById("text").innerHTML= a
+    };
+</script>
+</html>
