@@ -3,134 +3,134 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Age Checker</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+
+        label {
+            font-size: 16px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            border: none;
+            border-radius: 4px;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        #result {
+            margin-top: 20px;
+            font-size: 16px;
+            font-weight: bold;
+            color: #333;
+        }
+    </style>
 </head>
 <body>
-    <label for="">Enter Your Age</label>
-    <input type="text" id="age">
+
+    <div class="container">
+        <label for="age">Enter Your Age</label>
+        <input type="text" id="age">
+        <button onclick="checkAge()">Click Me</button>
+        <p id="result"></p>
+    </div>
+
+    <script>
+        function checkAge() {
+            var age = document.querySelector("#age").value;
+            var result = document.querySelector("#result");
+
+            switch(age) {
+                case "1":
+                case "2":
+                case "3":
+                case "4":
+                case "5":
+                case "6":
+                case "7":
+                case "8":
+                case "9":
+                case "10":
+                case "11":
+                case "12":
+                case "13":
+                case "14":
+                case "15":
+                case "16":
+                case "17":
+                case "18":
+                    result.innerHTML = "You are under age.";
+                    result.style.color = "red";
+                    break;
+                case "19":
+                case "20":
+                case "21":
+                case "22":
+                case "23":
+                case "24":
+                case "25":
+                case "26":
+                case "27":
+                case "28":
+                case "29":
+                case "30":
+                case "31":
+                case "32":
+                case "33":
+                case "34":
+                case "35":
+                case "36":
+                case "37":
+                case "38":
+                case "39":
+                case "40":
+                    result.innerHTML = "You are Eligible.";
+                    result.style.color = "green";
+                    break;
+                default:
+                    result.innerHTML = "You are Over age.";
+                    result.style.color = "orange";
+                    break;
+            }
+        }
+    </script>
+
 </body>
 </html>
-<script>
-    switch(age){
-        case "1":
-        alert("You are under age");
-        break;
-        case "2":
-        alert("You are under age");
-        break;
-        case "4":
-        alert("You are under age");
-        break;
-        case "2":
-        alert("You are under age");
-        break;
-        case "5":
-        alert("You are under age");
-        break;
-        case "6":
-        alert("You are under age");
-        break;
-        case "7":
-        alert("You are under age");
-        break;
-        case "8":
-        alert("You are under age");
-        break;
-        case "9":
-        alert("You are under age");
-        break;
-        case "10":
-        alert("You are under age");
-        break;
-        case "11":
-        alert("You are under age");
-        break;
-        case "12":
-        alert("You are under age");
-        break;
-        case "13":
-        alert("You are under age");
-        break;
-        case "14":
-        alert("You are under age");
-        break;
-        case "15":
-        alert("You are under age");
-        break;
-        case "16":
-        alert("You are under age");
-        break;
-        case "17":
-        alert("You are under age");
-        break;
-        case "18":
-        alert("You are under age");
-        break;
-        case "19":
-        alert("You are Eligible");
-        break;
-        case "20":
-        alert("You are Eligible");
-        break;
-        case "21":
-        alert("You are Eligible");
-        break;
-        case "22":
-        alert("You are Eligible");
-        break;
-        case "23":
-        alert("You are Eligible");
-        break;
-        case "24":
-        alert("You are Eligible");
-        break;
-        case "25":
-        alert("You are Eligible");
-        break;
-        case "26":
-        alert("You are Eligible");
-        break;
-        case "27":
-        alert("You are Eligible");
-        break;
-        case "30":
-        alert("You are Eligible");
-        break;
-        case "31":
-        alert("You are Eligible");
-        break;
-        case "32":
-        alert("You are Eligible");
-        break;
-        case "33":
-        alert("You are Eligible");
-        break;
-        case "34":
-        alert("You are Eligible");
-        break;
-        case "35":
-        alert("You are Eligible");
-        break;
-        case "36":
-        alert("You are Eligible");
-        break;
-        case "37":
-        alert("You are Eligible");
-        break;
-        case "38":
-        alert("You are Eligible");
-        break;
-        case "39":
-        alert("You are Eligible");
-        break;
-        case "40":
-        alert("You are Eligible");
-        break;
-        case "41":
-        alert("You are Ower age");
-        break;
-        default:
-        alert("You are Ower age");
-        break;
-    }
-</script>
+
