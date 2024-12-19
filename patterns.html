@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      body{
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: coral;
+        color: rgb(243, 243, 243);
+      }
+    </style>
+</head>
+<body>
+    <h2 class="output1"></h2>
+    <h2 class="output2"></h2>
+    <h2 class="output3"></h2>
+    <h2 class="output4"></h2>
+    <h2 class="output5"></h2>
+    <h2 class="output6"></h2>
+    <h2 class="output7"></h2>
+</body>
+<script>
+    // JavaScript patterns
+    let pattern1 = /cat/; 
+    // Spelling check karega small ho to small find karega
+    let str1 = "This cat is white";
+    var final = str1.match(pattern1);
+    document.querySelector(".output1").textContent = final;
+    // pattern2
+    let pattern2 = /Cat/;
+    // Spelling check karega Capital ho to Capital find karega
+    let str2 = "This is my good Cat";
+    var final = str2.match(pattern2)
+    document.querySelector(".output2").textContent = final;
+    // pattern3
+    //  i cosensitive hota ha
+    let pattern3 = /cat/i;
+    // Spelling check karega small or Capital dono find karega
+    let str3 = "My cat is Sweet"
+    var final = str3.match(pattern3)
+    document.querySelector(".output3").textContent = final;
+    // pattern4
+    // g globally dekhta ha yani ek string me jitni bar cat likha hoga ya find karga
+    let pattern4 = /cat/g;
+    let str4 = "My cat is sweet but my buddy cat is dangerous"
+    var final = str4.match(pattern4)
+    document.querySelector(".output4").textContent = final;
+    // pattern5
+    // i cosensitive or g globally watch ek sath use karna ma capital small d
+    let pattern5 = /cat/ig;
+    let str5 = "My cat is dangerous but my buddy Cat is sweet. cat is a good pet"
+    var final = str5.match(pattern5)
+    document.querySelector(".output5").textContent = final;
+    // pattern6
+    let pattern6 = /col[ou]r/ig;
+    // [ae] ek word ha yato o ho ya u ho
+    let str6 = "My room color is red & my parents room colur is green";
+    var final = str6.match(pattern6)
+    document.querySelector(".output6").textContent = final;
+    // pattern7
+    let pattern7 = /^cat/ig;
+    // ^ agar string ma pehla word c ho
+    let str7 = "cat";
+    var final = str7.match(pattern7)
+    document.querySelector(".output7").textContent = final;
+    let pattern8 = /cat$/ig;
+    // $ agar string ka last word t ho
+    let str8 = "cat";
+    var final = str8.match(pattern8)
+    document.querySelector(".output7").textContent = final;
+</script>
+</html>
